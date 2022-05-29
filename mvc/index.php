@@ -1,7 +1,7 @@
 <?php
 $classe = @$_GET['classe'];
 $metodo = @$_GET['acao'];
-$view = @$_GET['view'];
+$view = @$_GET['visao'];
 
 if ( empty($classe) )
 {
