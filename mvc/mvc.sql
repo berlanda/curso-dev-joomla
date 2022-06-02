@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `mvc`
 --
+CREATE DATABASE `mvc`;
+USE `mvc`;
 
 -- --------------------------------------------------------
 
