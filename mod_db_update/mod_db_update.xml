@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+    <name>Database update demo</name>
+    <version>1.0.1</version>
+    <description>Code demonstrating use of Joomla Database class to perform SQL UPDATE statements</description>
+    <files>
+        <filename module="mod_db_update">mod_db_update.php</filename>
+    </files>
+</extension>
