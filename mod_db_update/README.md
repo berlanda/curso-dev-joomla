@@ -1,17 +1,6 @@
 Exemplo de utilização de queries de inserção, alteração ou deleção com JDatabase
 ================
 
-Referências e fontes
----------------------
--   https://docs.joomla.org/Special:MyLanguage/Inserting,_Updating_and_Removing_data_using_JDatabase
--	https://gist.github.com/ChrisFrench/4275209 (Accessing the Custom Fields in Joomla User Profile)
--	https://www.joomlashack.com/blog/joomla/user-profile-plugin/
--	https://docs.joomla.org/Retrieving_request_data_using_JInput
-
--	https://docs.joomla.org/Creating_a_profile_plugin
--	https://docs.joomla.org/Accessing_the_current_user_object
--	https://docs.joomla.org/API17:JDatabase::insertid
-
 Exercício: faça você mesmo
 ---------------------
 1.	Baixe código de https://github.com/berlanda/curso-dev-joomla/archive/refs/heads/master.zip
@@ -22,3 +11,13 @@ Exercício: faça você mesmo
 6. Acesse a base de dados diretamente e verifique a diferença do uppercase e lowercase, na tabela #__users
 7. Acesse a base de dados diretamente e verifique as inserções e alterações na tabela #__user_profiles
 8. Passe o parâmetro msg2 na URL e veja alteração da segunda mensagem, referente à informação profile.message2
+
+Referências
+---------------------
+-   https://docs.joomla.org/Special:MyLanguage/Inserting,_Updating_and_Removing_data_using_JDatabase
+-	https://gist.github.com/ChrisFrench/4275209 (Accessing the Custom Fields in Joomla User Profile)
+-	https://www.joomlashack.com/blog/joomla/user-profile-plugin/
+-	https://docs.joomla.org/Retrieving_request_data_using_JInput
+-	https://docs.joomla.org/Creating_a_profile_plugin
+-	https://docs.joomla.org/Accessing_the_current_user_object
+-	https://docs.joomla.org/API17:JDatabase::insertid
