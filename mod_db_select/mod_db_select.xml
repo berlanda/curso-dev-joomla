@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+    <name>Exemplos de consultas em base de dados</name>
+    <version>1.0.1</version>
+    <description>
+    	Códigos demonstrando o uso da classe Joomla Database para realizar operações SQL de consulta de dados.</description>
+    <files>
+        <filename module="mod_db_select">mod_db_select.php</filename>
+        <filename>mod_db_select.php</filename>
+        <filename>mvc.sql</filename>
+    </files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="show_mvc_database_example"
+					type="radio"
+					label="Consultar MVC Database"
+					description="Consulta em base externa: depende da existência da tabela cliente, na base mvc, referente à aula sobre conceitos básicos de MVC."
+					default="0"
+					filter="integer"
+					class="btn-group btn-group-yesno"
+					>
+					<option value="1">JSHOW</option>
+					<option value="0">JHIDE</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
