@@ -4,13 +4,14 @@ Exemplo de utilização de queries de inserção, alteração ou deleção com J
 Exercício: faça você mesmo
 ---------------------
 1.	Baixe código de https://github.com/berlanda/curso-dev-joomla/archive/refs/heads/master.zip
-2.	Descompacte o contjunto de arquivos e compacte novamente apenas o diretório mod_db_update, instalando o pacote resultante a partir do menu Extensões > Gerenciar > Instalar. Procure o arquivo zip resultante e carregue-o para instalar o pacote.
-3. Publique o módulo em uma posição visível do template atualmente utilizado
-4. Acesse o site e autentique-se na área pública do site
-5. Localize-o na tela e atualize a janela do navegador mais de uma vez para ver a diferença, vendo as alternâncias de conteúdos
-6. Acesse a base de dados diretamente e verifique a diferença do uppercase e lowercase, na tabela #__users
-7. Acesse a base de dados diretamente e verifique as inserções e alterações na tabela #__user_profiles
-8. Passe o parâmetro msg2 na URL e veja alteração da segunda mensagem, referente à informação profile.message2
+2.	Descompacte o contjunto de arquivos e compacte novamente apenas o diretório mod_db_update, instalando o pacote resultante a partir do menu de backend Extensões > Gerenciar > Instalar. Procure o arquivo zip resultante e carregue-o para instalar o pacote.
+3. Habilite o plugin 'Usuário - Perfil', a partir do menu Extensões > Plugins. Utilize a busca ou filtre por plugins do tipo 'User'.
+4. Publique o módulo em uma posição visível do template atualmente utilizado
+5. Acesse o site e autentique-se na área pública do site
+6. Localize-o na tela e atualize a janela do navegador mais de uma vez para ver a diferença, vendo as alternâncias de conteúdos
+7. Acesse a base de dados diretamente e verifique a diferença do uppercase e lowercase, na tabela #__users
+8. Acesse a base de dados diretamente e verifique as inserções e alterações na tabela #__user_profiles
+9. Passe o parâmetro msg2 na URL e veja alteração da segunda mensagem, referente à informação profile.message2
 
 Referências
 ---------------------
