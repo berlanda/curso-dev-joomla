@@ -8,3 +8,8 @@ passo-a-passo.txt
 	a. veja pasta components/com_biblioteca/views/livros/tmpl/
 	b. crie item de menu no frontend para o componente
 04. delegar o controle para as controllers específicas e implementar as views de livros para backend e frontend
+	a. acesse o componente em backend
+	b. acesse o componente em frontend, repare os códigos já inseridos nas view.html.php e no número maior de linhas que já começa a se apresentar para a default.php de backend
+05. alterar de acordo necessário, executar sql para criar estrutura e dados de exemplo iniciais e criar as models de livros (backend e frontend), fazendo as alterações necessárias nas views
+	a. atente para a necessidade de ajustar o prefixo da tabela e repare na nomenclatura que liga a tabela ao componente
+06. <continua...>
