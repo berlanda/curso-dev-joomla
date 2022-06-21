@@ -1,0 +1,10 @@
+passo-a-passo.txt
+
+01. criar estrutura de pastas
+02. criar arquivos de entrada (entry points) e primeiro xml de instalação
+	a. acesse o componente em backend
+	b. acesse o componente em frontend (index.php?option=com_biblioteca)
+03. "passar o controle" do componente para as controllers e permitir criar item de menu de frontend
+	a. veja pasta components/com_biblioteca/views/livros/tmpl/
+	b. crie item de menu no frontend para o componente
+04. delegar o controle para as controllers específicas e implementar as views de livros para backend e frontend

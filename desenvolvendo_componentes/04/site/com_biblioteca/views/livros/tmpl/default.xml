@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Mostrar todos os livros" option="Padrão">
+	<message>
+	    <![CDATA[Primeiro link de menu para meu componente.]]>
+	</message>
+	</layout>
+</metadata>
