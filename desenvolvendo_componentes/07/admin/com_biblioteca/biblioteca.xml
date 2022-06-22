@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_biblioteca</name>
+    <author>SEU NOME</author>
+    <creationDate>Junho 2022</creationDate>
+    <copyright>(C) 2022 SEU NOME. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>SEU EMAIL</authorEmail>
+    <authorUrl>SUA URL</authorUrl>
+    <version>0.7.0</version>
+    <description>Descrição do seu primeiro componente.</description> 
+    <administration>
+        <menu img="class:categories">Biblioteca</menu>
+        <submenu>
+            <menu link="option=com_biblioteca"
+            view="livros" img="class:generic"
+            alt="Biblioteca/Livros">Livros</menu>
+        </submenu>
+    </administration>
+</extension>

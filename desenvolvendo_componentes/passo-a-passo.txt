@@ -7,9 +7,24 @@ passo-a-passo.txt
 03. "passar o controle" do componente para as controllers e permitir criar item de menu de frontend
 	a. veja pasta components/com_biblioteca/views/livros/tmpl/
 	b. crie item de menu no frontend para o componente
-04. delegar o controle para as controllers específicas e implementar as views de livros para backend e frontend
+04. delegar o controle para as views de livros de backend e frontend
 	a. acesse o componente em backend
 	b. acesse o componente em frontend, repare os códigos já inseridos nas view.html.php e no número maior de linhas que já começa a se apresentar para a default.php de backend
-05. alterar de acordo necessário, executar sql para criar estrutura e dados de exemplo iniciais e criar as models de livros (backend e frontend), fazendo as alterações necessárias nas views
-	a. atente para a necessidade de ajustar o prefixo da tabela e repare na nomenclatura que liga a tabela ao componente
-06. <continua...>
+05. ajustar e executar código sql para criar estrutura e dados de exemplo iniciais; e criar as models de livros (backend e frontend), fazendo as alterações necessárias nas views
+	a. busque o código a partir de administrator/components/com_biblioteca/sql
+	b. atente para a necessidade de ajustar o prefixo da tabela e repare na nomenclatura que relaciona a tabela ao componente
+	c. observe o join left nas models e os parâmetros de ordenação na model de backend recém criada
+06. criar as controllers específicas de livros em backend e frontend, bem como criar a model livro de backend; modificar a view.html.php de backend/livros para permitir ações de alteração de estado dos itens; modificar a model de frontend para exibir somente os itens publicados
+	a. teste publicar e despublicar itens de backend, copiando um arquivo por vez, na ordem: controller livros de backend, model livro de backend e depois table livro (backend)
+	b. acesse a página em frontend e perceba que os itens despublicados não são apresentados
+	c. utilize outros botões e múltiplas seleções para publicar, despublicar, mandar para a lixeira ou retornar itens. Não os apague definitivamente
+	d. Observe o erro ao tentar criar ou editar um item
+07. criar pasta images/com_biblioteca a partir de media/; adicionar diretório com css de media/css para media/com_biblioteca/css; alterar o arquivo de entrada de frontend para adicionar arquivo css recém adicionado; modificar a view.html.php de backend/livros para adicionar  primeiro filtro de backend e botão de preferencias do componente;
+	a. altere novamente os estados e experimente utilizar o filtro lateral
+	b. utilize o botão de opções do componente, o que resultará em erro (esperado para o momento)
+	c. recarregue a view de frontend e veja como a página está apresentada, a partir do carregamento do css
+08. criar controller livro.php em backend; criar view para livro e arquivo default.php equivalente; alterar model livro.php e criar form livro.xml com campos da tabela (tudo em backend)
+	a. a cada etapa, clique nas opções de editar ou criar novo item para se habituar às mensagens de erro normalmente retornadas
+	b. edite as informações de um livro e crie outro, como exemplo. Use uma imagem já existente para ganhar tempo
+09. criar helper.php de backend para apoiar AGORA no controle de itens de menu do componente, e FUTURAMENTE no controle de permissões por categoria;
+
