@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="com_biblioteca_livros_view_default_title" option="com_biblioteca_livros_view_default_option">
+	<message>
+	    <![CDATA[com_biblioteca_livros_view_default_desc]]>
+	</message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request">
+			<field
+			   name="catid"
+			   type="category"
+			   extension="com_biblioteca"
+			   class="inputbox"
+			   default=""
+			   label="COM_BIBLIOTECA_FIELD_CATID_LABEL"
+			   description="COM_BIBLIOTECA_FIELD_CATID_DESC"
+			   required="true"
+			>
+			   <option value="0">JOPTION_SELECT_CATEGORY</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

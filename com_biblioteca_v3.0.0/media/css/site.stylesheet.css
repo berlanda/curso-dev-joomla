@@ -1,0 +1,38 @@
+.livro_title {
+  display:block;
+  width:140px;
+  height:50px;
+  background: #EEE;
+  padding: 5px
+}
+.livro_title a {
+  color: #555555;
+  font-family: Verdana,Arial;
+  font-size: 14px;
+  font-weight:bold;
+  line-height: 1px !important;
+}
+.mylivro{
+  padding-bottom: 50px;
+  float: left;
+  padding-right: 20px;
+}
+.mylivro img {
+  width:160px !important;
+  height:190px !important;
+}
+.livro_element{
+  width: 150px;
+  padding-top: 2px;
+}
+.livro_element_img {
+	float:left;
+	margin:0 20px 20px 0;
+}
+.mylivro_item {
+
+}
+.livro_element_descricao {
+	font-size: 16px;
+	line-height: 1.5em
+}

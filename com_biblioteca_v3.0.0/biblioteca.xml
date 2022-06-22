@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_biblioteca</name>
+    <author>Rafael Berlanda</author>
+    <creationDate>Junho 2022</creationDate>
+    <copyright>(C) 2022 Rafael Berlanda. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>rafaelberlanda@gmail.com</authorEmail>
+    <authorUrl>https://www.linkedin.com/in/rafael-de-souza-berlanda/</authorUrl>
+    <version>3.0.0</version>
+    <description>COM_BIBLIOTECA_XML_DESCRIPTION</description>
+    <scriptfile>script.php</scriptfile>
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    <files folder="site">
+        <filename>controller.php</filename>
+        <filename>biblioteca.php</filename>
+        <folder>controllers</folder>
+        <folder>language</folder>
+        <folder>models</folder>
+        <folder>views</folder>
+    </files>
+    <media destination="com_biblioteca" folder="media">
+        <folder>css</folder>
+        <folder>images</folder>
+    </media>
+    <administration>
+        <menu img="class:categories">COM_BIBLIOTECA_MENU</menu>
+        <submenu>
+            <menu link="option=com_biblioteca"
+            view="livros" img="class:generic"
+            alt="Biblioteca/Livros">com_biblioteca_livros</menu>
+            <menu link="option=com_categories&amp;extension=com_biblioteca"
+            view="categories" img="class:categories"
+            alt="Biblioteca/Categories">com_biblioteca_categories
+            </menu>
+            <menu link="option=com_biblioteca&amp;view=autores"
+            img="class:generic"
+            alt="Biblioteca/Autores">com_biblioteca_autores</menu>
+        </submenu>        
+        <files folder="admin">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>biblioteca.php</filename>
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="admin">
+            <language tag="pt-BR">language/pt-BR/pt-BR.com_biblioteca.ini</language>
+            <language tag="pt-BR">language/pt-BR/pt-BR.com_biblioteca.sys.ini</language>
+        </languages>
+    </administration>
+</extension>
