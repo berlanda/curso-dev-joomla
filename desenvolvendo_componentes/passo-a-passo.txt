@@ -26,5 +26,44 @@ passo-a-passo.txt
 08. criar controller livro.php em backend; criar view para livro e arquivo default.php equivalente; alterar model livro.php e criar form livro.xml com campos da tabela (tudo em backend)
 	a. a cada etapa, clique nas opções de editar ou criar novo item para se habituar às mensagens de erro normalmente retornadas
 	b. edite as informações de um livro e crie outro, como exemplo. Use uma imagem já existente para ganhar tempo
-09. criar helper.php de backend para apoiar AGORA no controle de itens de menu do componente, e FUTURAMENTE no controle de permissões por categoria;
+09. criar helper.php de backend para apoiar AGORA no controle de itens de menu do componente, e FUTURAMENTE no controle de permissões por categoria; fazer inclusão (require_once) do arquivo helper.php a partir da controller principal da raiz; alterar view.html.php de livros para poder incluir método de menus da helper; criar arquivo de configuração ACL para permitir o funcionamento correto do link de categorias do componente, bem como registrar as permissões apropriadas, se necessário; testar; executar o arquivo sql corresponde à versão 0.9.0 para adicionar a coluna de categoria à tabela #__biblioteca_livro; alterar a model livros para inserir a coluna nas consultas; alterar a view para inserir a coluna na view de livros, incluindo a default.php; alterar o xml responsável pelo formulário de cadastro de livro; alterar o xml de instalação para incluir menu de categorias (só ficará disponível ao reinstalar o componente, faça isso somente ao final)
+
+	a. observe o conteúdo do arquivo access.xml e perceba que o controle básico de permissões, bem aquele a nível de categoria, exige basicamente o mesmo padrão de arquivo, independentemente do componente utilizado
+	b. crie as categorias desejadas ou siga a sugestão a seguir, e vincule com os livros:
+
+		Romance > Dom Casmurro
+		Jornalismo literário > O Reacionário
+		Fantasia > Crônicas de Nárnia
+		New Age: Religião e Espiritualidade > 12 Regras para a vida
+		Psicologia e Filosofia > Por que fazemos o que fazemos?
+		Relacionamentos > As Cinco Linguagens do Amor
+		Ficção Científica > A Garota do Lago
+
+10. alterar arquivo default.xml a fim de poder escolher a categoria do link na lista de livros em frontend;  alterar a model livros de frontend para incluir informação de categoria e também para poder filtrar por categoria; criar arquivo config.xml na raiz do componente para permitir parâmetros de configuração globais para o componente, bem como configurar tipos de permissão mais gerais para o componente (passo necessário para configurar permissões mais específicas para categorias, em todo o componente); incluir controller, model e view para visualização de livro único em frontend (view=livro&id={ID_DO_LIVRO}); alterar view de livros para apontar para view de livro
+
+	a. caso tenha feito a partir dos códigos de exemplo, observe o código adicionado junto com o filtro de categoria para apresentar somente livros com imagem de capa cadastrada: esse código demonstra como personalizar consultas de acordo com o adapter utilizado, caso seja necessário
+
+	b. altere os parâmetros do componene e teste os diferentes tipos ao clicar nos livros da lista de frontend
+
+	c. Crie um item de menu novo apontado para categoria específica de livros;
+
+11. criar filtros de lista em backend, incluindo paginação; incluir links nos itens da lista direto para edição; inserir opções para permitir ordenação por drag and drop, desde a controller até chegar na view de lista de livros; inserir os primeiros controles de permissão no nível da default.php de livros; ordenar a lista de livros em frontend pela ordenação definida ao arrastar itens em backend (campo ordering)
+	
+	a. altere a ordenação e perceba as mudancas em frontend
+
+	b. observe que as funções de ordenação e filtro sao quase todas padronizadas, podendo ser replicadas em seus próximos componentes facilmente
+
+12. estender o nível de controle de permissões até o nível de categoria, começando por criar função específica na helper do componente; revisar todos os arquivos de backend, a fim de incluir as permissões necessárias
+
+	a. crie um usuário manager ou editor
+	b. faça teste de controle de permissões para ele, primeiro em nível de categoria e depois em nível de componente
+
+
+13. criar edição de autores em backend
+
+14. criar edição livros em frontend
+
+15. empacotar para instalação
+
+
 
