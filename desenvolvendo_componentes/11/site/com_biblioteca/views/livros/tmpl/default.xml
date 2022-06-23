@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Mostrar todos os livros" option="Padrão">
+	<message>
+	    <![CDATA[Primeiro link de menu para meu componente.]]>
+	</message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request">
+			<field
+			   name="catid"
+			   type="category"
+			   extension="com_biblioteca"
+			   class="inputbox"
+			   default=""
+			   label="Categoria de livros"
+			   description="Escolha uma categoria para filtrar as informações do item de menu."
+			   required="true"
+			>
+			   <option value="0">JOPTION_SELECT_CATEGORY</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>
