@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+ <fieldset name="component"
+   label="Componente de biblioteca"
+   description="Componente simples para fins de estudo e aprendizado.">
+	 <field name="target" type="list"
+		default="0"
+		description="Selecione como os links de livros em frontend serão abertos."
+		label="Tipo de target de link em frontend">
+		<option value="0">JBROWSERTARGET_PARENT</option>
+		<option value="1">JBROWSERTARGET_NEW</option>
+		<option value="2">JBROWSERTARGET_POPUP</option>
+		<option value="3">JBROWSERTARGET_MODAL</option>
+	 </field>
+
+	 <field name="targetwidth" type="text" default="400" size="40"
+	   label="Largura da janela de target"
+	   description="Largura da janela de target" />
+
+ 	 <field name="targetheight" type="text" default="400" size="40"
+            label="Altura da janela de target"
+            description="Altura da janela de target" />
+
+	 <field name="imagewidth" type="text" default="200" size="40"
+	    label="Largura da imagem apresentada"
+	    description="Largura da imagem apresentada (CSS do módulo pode vir a substituir essa configuração)." />
+	    
+ </fieldset>
+ <fieldset name="permissions"
+   description="JCONFIG_PERMISSIONS_DESC"
+   label="JCONFIG_PERMISSIONS_LABEL">
+	 <field name="rules" type="rules"
+	  component="com_biblioteca"
+	  filter="rules"
+	  validate="rules"
+	  label="JCONFIG_PERMISSIONS_LABEL"
+	  section="component" />
+ </fieldset>
+</config>
