@@ -59,11 +59,19 @@ passo-a-passo.txt
 	b. faça teste de controle de permissões para ele, primeiro em nível de categoria e depois em nível de componente
 
 
-13. criar edição de autores em backend
+13. criar edição de autores em backend (cópia de pasta); criar arquivos de tradução de backend e frontend; alterar função da helper para adicionar novo item de menu para autores; alterar o xml de instalação para incluir menu de autores (só ficará disponível ao reinstalar o componente, faça isso somente ao final)
 
-14. criar edição livros em frontend
+	a. aproveite o exemplo para verificar as strings de tradução utilizadas no exemplo: pasta autores em backend
 
-15. empacotar para instalação
+14. criar edição livros em frontend, criando controllers, models e views edtlivro e edtlivros; não esquecer das strings de tradução em frontend
+
+	a. edite itens em frontend
+
+15. empacotar para instalação: retirar arquivos dos diretórios com_biblioteca, dentro de site e admin (subir um nível), e apagar diretórios com_biblioteca; mover biblioteca.xml para a raiz do diretório de instalação; criar arquivo script.php na raiz; detalhar o arquivo biblioteca.xml, utilizando strings de tradução; e padronizar os arquivos sql de instalação
+
+	a. crie uma nova instalação do CMS Joomla, instale o idioma pt-BR e depois instale o componente, em sua versão final. Faça os cadastros, confirme se o diretório images/com_bibliotecas foi criado e crie os itens de menu de frontend.
+
+	b. PARABÉNS! seu componente está pronto.
 
 
 
