@@ -21,20 +21,6 @@ class BibliotecaModelLivros extends JModelList
 		parent::__construct($config);
 	}
 
-	protected function populateState($ordering = null, $direction = null)
-	{
-		$search = $this->getUserStateFromRequest(
-			$this->context.'.filter.search', 'filter_search');
-       	$this->setState('filter.search', $search);
-
-		$published = $this->getUserStateFromRequest(
-			$this->context.'.filter.state', 'filter_state',
-			'', 'string');
-    	$this->setState('filter.state', $published);
-	    
-	    parent::populateState('a.ordering', 'asc');
-	}
-
 	protected function getListQuery()
 	{
 		$db    = $this->getDbo();
@@ -43,31 +29,16 @@ class BibliotecaModelLivros extends JModelList
 			$this->getState(
 				'list.select',
 				'a.id, a.titulo, a.autorid, ' .
-           		'a.state, a.editora, ' .
+           		'a.state, a.editora, a.imagem, a.ano_publicacao, a.url, ' .
            		'a.publish_up, a.publish_down, a.ordering'
 				)
-			);
+		);
 		$query->from($db->quoteName('#__biblioteca_livro').' AS a');
+		$query->where('(a.state IN (0, 1))');
 
 		$query->select('d.nome AS autor_nome');
 		$query->join('LEFT', '#__biblioteca_autor AS d ON d.id = a.autorid');
 
-		$published = $this->getState('filter.state');
-	    if (is_numeric($published))
-	    {
-	      $query->where('a.state = '.(int) $published);
-	    }
-	    elseif ($published === '')
-	    {
-	      $query->where('(a.state IN (0, 1))');
-	    }
-
-		$orderCol = $this->state->get('list.ordering');
-		$orderDirn = $this->state->get('list.direction');
-
-		$query->order($db->escape($orderCol.' '.$orderDirn));
-
 		return $query;
 	}
-
 }

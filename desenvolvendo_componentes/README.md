@@ -1,35 +1,43 @@
 passo-a-passo.txt
 
 01. criar estrutura de pastas
-02. criar arquivos de entrada (entry points) e primeiro xml de instalação
+
+02. criar arquivos de entrada (entry points) e primeiro xml de instalação. Instale o componente por meio do modo "Discover" ("Pendente" em português)
 	a. acesse o componente em backend
 	b. acesse o componente em frontend (index.php?option=com_biblioteca)
-03. "passar o controle" do componente para as controllers e permitir criar item de menu de frontend
+
+03. "passar o controle" do componente para a controller.php da raiz e permitir criar item de menu de frontend
 	a. veja pasta components/com_biblioteca/views/livros/tmpl/
 	b. crie item de menu no frontend para o componente
+
 04. delegar o controle para as views de livros de backend e frontend
 	a. acesse o componente em backend
 	b. acesse o componente em frontend, repare os códigos já inseridos nas view.html.php e no número maior de linhas que já começa a se apresentar para a default.php de backend
-05. ajustar e executar código sql para criar estrutura e dados de exemplo iniciais; e criar as models de livros (backend e frontend), fazendo as alterações necessárias nas views
-	a. busque o código a partir de administrator/components/com_biblioteca/sql
+
+05. ajustar e executar código sql para criar estrutura e dados de exemplo iniciais; e criar as models de livros (backend e frontend), fazendo as 	alterações necessárias nas views de livros
+	a. busque o código a partir de administrator/components/com_biblioteca/sql, altere o prefixo #__ para o que está utilizando em sua instalação local e execute o código para criar as tabelas e as informações de exemplo (#__biblioteca_livro e #__biblioteca_autor)
 	b. atente para a necessidade de ajustar o prefixo da tabela e repare na nomenclatura que relaciona a tabela ao componente
 	c. observe o join left nas models e os parâmetros de ordenação na model de backend recém criada
-06. criar as controllers específicas de livros em backend e frontend, bem como criar a model livro de backend; modificar a view.html.php de backend/livros para permitir ações de alteração de estado dos itens; modificar a model de frontend para exibir somente os itens publicados
+
+06. criar as controllers específicas de livros em backend e frontend, bem como criar a model livro de backend e a classe table correspondente; modificar a view.html.php de backend/livros para permitir ações de alteração de estado dos itens; modificar a model de frontend para exibir somente os itens publicados
 	a. teste publicar e despublicar itens de backend, copiando um arquivo por vez, na ordem: controller livros de backend, model livro de backend e depois table livro (backend)
 	b. acesse a página em frontend e perceba que os itens despublicados não são apresentados
 	c. utilize outros botões e múltiplas seleções para publicar, despublicar, mandar para a lixeira ou retornar itens. Não os apague definitivamente
 	d. Observe o erro ao tentar criar ou editar um item
-07. criar pasta images/com_biblioteca a partir de media/; adicionar diretório com css de media/css para media/com_biblioteca/css; alterar o arquivo de entrada de frontend para adicionar arquivo css recém adicionado; modificar a view.html.php de backend/livros para adicionar  primeiro filtro de backend e botão de preferencias do componente;
+
+07. criar pasta images/com_biblioteca no site e copiar para ela os arquivos constantes em 07/media/com_biblioteca/images/; copiar diretório 07/media/com_biblioteca/ para media/com_biblioteca/; alterar o arquivo de entrada de frontend para adicionar arquivo css recém adicionado na pasta media; modificar a view.html.php de backend/livros para adicionar  primeiro filtro de backend e botão de preferências do componente;
 	a. altere novamente os estados e experimente utilizar o filtro lateral
 	b. utilize o botão de opções do componente, o que resultará em erro (esperado para o momento)
 	c. recarregue a view de frontend e veja como a página está apresentada, a partir do carregamento do css
+
 08. criar controller livro.php em backend; criar view para livro e arquivo default.php equivalente; alterar model livro.php e criar form livro.xml com campos da tabela (tudo em backend)
 	a. a cada etapa, clique nas opções de editar ou criar novo item para se habituar às mensagens de erro normalmente retornadas
 	b. edite as informações de um livro e crie outro, como exemplo. Use uma imagem já existente para ganhar tempo
-09. criar helper.php de backend para apoiar AGORA no controle de itens de menu do componente, e FUTURAMENTE no controle de permissões por categoria; fazer inclusão (require_once) do arquivo helper.php a partir da controller principal da raiz; alterar view.html.php de livros para poder incluir método de menus da helper; criar arquivo de configuração ACL para permitir o funcionamento correto do link de categorias do componente, bem como registrar as permissões apropriadas, se necessário; testar; executar o arquivo sql corresponde à versão 0.9.0 para adicionar a coluna de categoria à tabela #__biblioteca_livro; alterar a model livros para inserir a coluna nas consultas; alterar a view para inserir a coluna na view de livros, incluindo a default.php; alterar o xml responsável pelo formulário de cadastro de livro; alterar o xml de instalação para incluir menu de categorias (só ficará disponível ao reinstalar o componente, faça isso somente ao final)
+	
+> 09. criar helper.php de backend para apoiar AGORA no controle de itens de menu do componente, e FUTURAMENTE no controle de permissões por categoria; fazer inclusão (require_once) do arquivo helper.php a partir da controller principal da raiz; alterar view.html.php de livros para poder incluir método de menus da helper; criar arquivo de configuração ACL para permitir o funcionamento correto do link de categorias do componente, bem como registrar as permissões apropriadas, se necessário; testar; executar o arquivo sql corresponde à versão 0.9.0 para adicionar a coluna de categoria à tabela #__biblioteca_livro; alterar a model livros para inserir a coluna nas consultas; alterar as views para inserir a coluna de categoria a visuação (e ediçao), incluindo a default.php; alterar o xml responsável pelo formulário de cadastro de livro; testar; alterar o xml de instalação para incluir menu de categorias (só ficará disponível ao reinstalar o componente, então só faça isso ao final)
 
-	a. observe o conteúdo do arquivo access.xml e perceba que o controle básico de permissões, bem aquele a nível de categoria, exige basicamente o mesmo padrão de arquivo, independentemente do componente utilizado
-	b. crie as categorias desejadas ou siga a sugestão a seguir, e vincule com os livros:
+	a. observe o conteúdo do arquivo access.xml e perceba que o controle básico de permissões do componente, bem como o controle de nível de categoria, exige basicamente o mesmo padrão de arquivo xml, independentemente do componente utilizado
+	b. crie as categorias que quiser ou siga a sugestão a seguir vinculando os livros da seguinte forma:
 
 		Romance > Dom Casmurro
 		Jornalismo literário > O Reacionário
@@ -39,11 +47,11 @@ passo-a-passo.txt
 		Relacionamentos > As Cinco Linguagens do Amor
 		Ficção Científica > A Garota do Lago
 
-10. alterar arquivo default.xml a fim de poder escolher a categoria do link na lista de livros em frontend;  alterar a model livros de frontend para incluir informação de categoria e também para poder filtrar por categoria; criar arquivo config.xml na raiz do componente para permitir parâmetros de configuração globais para o componente, bem como configurar tipos de permissão mais gerais para o componente (passo necessário para configurar permissões mais específicas para categorias, em todo o componente); incluir controller, model e view para visualização de livro único em frontend (view=livro&id={ID_DO_LIVRO}); alterar view de livros para apontar para view de livro
+10. alterar arquivo default.xml a fim de poder escolher a categoria do link na lista de livros em frontend; alterar a model livros de frontend para incluir informação de categoria e também para poder filtrar por categoria; criar arquivo config.xml na raiz do componente de backend para permitir parâmetros de configuração globais para o componente, bem como configurar tipos de permissão mais gerais para o componente (passo necessário para configurar permissões mais específicas para categorias, em todo o componente); incluir controller, model e view para visualização de livro único em frontend (view=livro&id={ID_DO_LIVRO}); alterar view de livros (plural) para apontar para view de livro (singular)
 
-	a. caso tenha feito a partir dos códigos de exemplo, observe o código adicionado junto com o filtro de categoria para apresentar somente livros com imagem de capa cadastrada: esse código demonstra como personalizar consultas de acordo com o adapter utilizado, caso seja necessário
+	a. na model livros de frontend, observe o código adicionado junto ao filtro de categoria para apresentar somente livros com imagem de capa cadastrada: esse código demonstra como personalizar consultas de acordo com o adapter utilizado, caso seja necessário
 
-	b. altere os parâmetros do componene e teste os diferentes tipos ao clicar nos livros da lista de frontend
+	b. altere os parâmetros do componente e teste os diferentes tipos ao clicar nos livros da lista de frontend
 
 	c. Crie um item de menu novo apontado para categoria específica de livros;
 
