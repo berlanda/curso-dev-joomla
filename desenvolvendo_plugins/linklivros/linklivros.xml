@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="content" method="upgrade">
+	<name>plg_content_linklivros</name>
+	<author>Rafael Berlanda</author>
+	<creationDate>Junho 2022</creationDate>
+	<copyright>(C) 2022 Rafael Berlanda Todos os direitos reservados</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>rafaelberlanda[at]gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0.0</version>
+	<description>Plugin criado para fins didádicos.</description>
+	<files>
+		<filename plugin="linklivros">linklivros.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				 <field name="target" type="list"
+					default="0"
+					description="Abrir na mesma janela ou em nova janela."
+					label="Target">
+					<option value="">JBROWSERTARGET_PARENT</option>
+					<option value="_blank">JBROWSERTARGET_NEW</option>
+				 </field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
