@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5.0" type="plugin" group="system" method="upgrade">
+    <name>PLG_SYS_REDIRLIVROS</name>
+    <author>Rafael Berlanda</author>
+    <creationDate>Junho 2022</creationDate>
+    <copyright>Copyright (C) 2022 Rafael Berlanda. All rights reserved.</copyright>
+    <license>GNU General Public License</license>
+    <authorEmail>rafaelberlanda[at]gmail.com</authorEmail>
+    <authorUrl></authorUrl>
+    <version>1.0.0</version>
+    <description>Plugin desenvolvido para fins didáticos</description>
+    <files>
+        <filename plugin="redirlivros">redirlivros.php</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+
+                <field name="redirect" type="radio" class="radio btn-group"
+                       default="interno" label="Tipo de link"
+                       description="Tipo de link de redirecionamento">
+                    <option value="interno">Direcionar URL Interna</option>
+                    <option value="externo">Direcionar URL Externa</option>                    
+                </field>
+              
+            </fieldset>
+            
+        </fields>
+    </config>
+</extension>
