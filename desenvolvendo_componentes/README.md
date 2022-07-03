@@ -81,5 +81,13 @@ passo-a-passo.txt
 
 	b. PARABÉNS! seu componente está pronto.
 
+---------------------
+Passos EXTRAS para inclusão do captcha em tela de frontend pública desse mesmo componente
+---------------------
 
+16. CAPTCHA
+- Criar nova view para receber sugestoes de livros em frontend, copiando diferentes arquivos referentes a edtlivro para sugerirlivro. Alterar nome de sugerirlivro/tmpl/edit.php para default.php
+- incluir arquivo default.xml na pasta views/sugerirlivro/tmpl
+- alterar livro.xml de frontend para incluir campo de captcha
+- habilitar plugin, configurar plugin padrão e passar as chaves de acesso.
 
