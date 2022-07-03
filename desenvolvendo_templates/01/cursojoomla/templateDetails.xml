@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "https://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+	<name>CURSOJOOMLA</name>
+	<creationDate>Julho 2022</creationDate>
+	<author>Rafael Berlanda</author>
+	<authorEmail>rafaelberlanda@gmail.com</authorEmail>
+	<authorUrl>https://www.linkedin.com/in/rafael-de-souza-berlanda/</authorUrl>
+	<copyright>(C) 2022 Rafael de Souza Berlanda.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>0.1.0</version>
+	<description>TPL_CURSOJOOMLA_XML_DESCRIPTION</description>
+
+	<files>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>img</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>favicon.ico</filename>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+	</files>
+
+	<positions>
+		<position>debug</position>
+		<position>topo</position>
+		<position>position-0</position>
+	</positions>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_CURSOJOOMLA.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_CURSOJOOMLA.sys.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.tpl_CURSOJOOMLA.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.tpl_CURSOJOOMLA.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+
+				<field 
+					name="logo"
+					type="media"
+					label="TPL_CURSOJOOMLA_FIELD_LOGO_LABEL" 
+					description="TPL_CURSOJOOMLA_FIELD_LOGO_DESC" 
+				/>
+
+				<field 
+					name="sitetitle"  
+					type="text" 
+					label="TPL_CURSOJOOMLA_FIELD_SITETITLE_LABEL"
+					description="TPL_CURSOJOOMLA_FIELD_SITETITLE_DESC"
+					default=""
+					filter="string" 
+				/>
+
+				<field 
+					name="sitedescription"  
+					type="text" 
+					label="TPL_CURSOJOOMLA_FIELD_DESCRIPTION_LABEL"
+					description="TPL_CURSOJOOMLA_FIELD_DESCRIPTION_DESC"
+					default=""
+					filter="string" 
+				/>
+
+				<field
+					name="templatecolor" 
+					type="list" 
+					label="TPL_CURSOJOOMLA_FIELD_TEMPLATECOLOR_LABEL"
+					description="TPL_CURSOJOOMLA_FIELD_TEMPLATECOLOR_DESC"
+					default="nature"
+					filter="word"
+					>
+					<option value="nature">TPL_CURSOJOOMLA_OPTION_NATURE</option>
+					<option value="personal">TPL_CURSOJOOMLA_OPTION_PERSONAL</option>
+					<option value="red">TPL_CURSOJOOMLA_OPTION_RED</option>
+					<option value="turq">TPL_CURSOJOOMLA_OPTION_TURQ</option>
+					<option value="image">TPL_CURSOJOOMLA_OPTION_IMAGE</option>
+				</field>
+
+				<field 
+					name="backgroundcolor" 
+					type="color" 
+					label="TPL_CURSOJOOMLA_FIELD_HEADER_BACKGROUND_COLOR_LABEL"
+					description="TPL_CURSOJOOMLA_FIELD_HEADER_BACKGROUND_COLOR_DESC"
+					default="#eee"
+					showon="templatecolor:image" 
+				/>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>
