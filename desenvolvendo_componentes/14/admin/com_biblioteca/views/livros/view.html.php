@@ -12,6 +12,7 @@ class BibliotecaViewLivros extends JViewLegacy
 		$this->items = $this->get('Items');
 		$this->state = $this->get('State');
 		$this->pagination  = $this->get('Pagination');
+		$this->checked_out  = '';
 
 		if (count($errors = $this->get('Errors')))
 		{

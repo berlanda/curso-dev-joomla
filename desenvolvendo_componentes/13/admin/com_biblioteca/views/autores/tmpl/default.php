@@ -120,7 +120,7 @@ $sortFields = $this->getSortFields();
 			<tbody>
 				<?php foreach ($this->items as $i => $item) :
 
-					$canCheckin = $user->authorise('core.manage', 'com_checkin') || $item->checked_out == $user->get('id') || $item->checked_out == 0;
+					@$canCheckin = $user->authorise('core.manage', 'com_checkin') || $item->checked_out == $user->get('id') || $item->checked_out == 0;
 					$canChange  = $user->authorise('core.edit.state', 'com_biblioteca') && $canCheckin;
 					$canEdit    = $user->authorise('core.edit', 'com_biblioteca');
 				?>

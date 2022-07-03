@@ -7,7 +7,7 @@ class BibliotecaViewLivros extends JViewLegacy
       $app = JFactory::getApplication();
       $params = $app->getParams();
       $this->assignRef('params', $params);
-   	
+      $this->pageclass_sfx = '';
       parent::display($tpl);
    }
 }

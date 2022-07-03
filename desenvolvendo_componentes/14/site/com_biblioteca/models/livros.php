@@ -61,6 +61,8 @@ class BibliotecaModelLivros extends JModelList
 			$query->where('a.catid = '.(int) $categoryId);
 		}
 
+		$query->order('a.ordering ASC');
+
 		return $query;
 	}
 }

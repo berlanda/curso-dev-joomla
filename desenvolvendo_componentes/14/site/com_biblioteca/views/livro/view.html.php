@@ -10,6 +10,7 @@ class BibliotecaViewLivro extends JViewLegacy
       $app = JFactory::getApplication();
       $params = $app->getParams();
       $this->assignRef('params', $params);
+      $this->pageclass_sfx = '';
 
       $breadcrumb = $app->getPathWay();
       $breadcrumb->addItem( $this->items[0]->titulo );

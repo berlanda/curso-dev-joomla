@@ -14,7 +14,6 @@
 			size="40" label="JFIELD_ALIAS_LABEL"
 			description="COM_BIBLIOTECA_FIELD_ALIAS_DESC" />
 
-		<!-- -->
 		<field
 			name="catid"
 			type="category"
