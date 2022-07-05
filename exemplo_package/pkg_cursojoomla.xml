@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.0">
+    <name>Cursojoomla Package</name>
+    <author>Rafael Berlanda</author>
+    <creationDate>Julho 2022</creationDate>
+    <packagename>cursojoomla</packagename>
+    <license>GNU GPL</license>
+    <version>1.0.0</version>
+    <url></url>
+    <packager>Rafael Berlanda</packager>
+    <packagerurl></packagerurl>
+    <description>Pacote de instalação único que combina vários zips instaláveis desenvolvidos durante o curso.</description>
+    <files folder="packages">
+      <file type="component" id="biblioteca" >com_biblioteca.zip</file>
+      <file type="template" id="cursojoomla" >cursojoomla.zip</file>
+      <file type="module" id="db_select" >mod_db_select.zip</file>
+      <file type="module" id="db_update" >mod_db_update.zip</file>
+      <file type="module" id="latestextensions" >mod_latestextensions.zip</file>
+      <file type="plugin" id="linklivros" group="content">plg_linklivros.zip</file>
+      <file type="plugin" id="livros" group="search">plg_livros.zip</file>
+      <file type="plugin" id="redirlivros" group="system">plg_redirlivros.zip</file>
+    </files>
+</extension>
