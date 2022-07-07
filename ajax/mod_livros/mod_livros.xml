@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+ type="module"
+ version="3.0"
+ method="upgrade"
+ client="site">
+   <name>mod_livros</name>
+   <creationDate>Jul 2022</creationDate>
+   <author>Rafael Berlanda</author>
+   <authorEmail>rafaelberlanda@gmail.com</authorEmail>
+   <authorUrl></authorUrl>
+   <copyright>Copyright (C) 2022 Rafael Berlanda. All rights reserved.</copyright>
+   <license>GNU GPL</license>
+   <version>1.0.0</version>
+ <description></description>
+ <files>
+   <filename module="mod_livros">mod_livros.php</filename>
+   <filename>helper.php</filename>
+   <folder>tmpl</folder>
+ </files>
+</extension>
